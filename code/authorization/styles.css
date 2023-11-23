@@ -1,0 +1,278 @@
+/* Основні стилі залишаються без змін */
+@font-face {
+    font-family: 'HelveticaNeueCyr-Medium';
+    src: url('../../fons/HelveticaNeueCyr-Medium.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'e-Ukraine-Light';
+    src: url('../../fons/e-Ukraine-Light.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'e-Ukraine-UltraLight';
+    src: url('../../fons/e-Ukraine-UltraLight.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'e-Ukraine-Regular';
+    src: url('../../fons/e-Ukraine-Regular.otf') format('woff');
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    background-color: #F5F5F5;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.white--menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.top--menu {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.top--menu a {
+    text-decoration: none;
+}
+
+.top--menu img {
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+    margin-left: 20px;
+}
+
+.text--logo {
+    font-family: 'HelveticaNeueCyr-Medium', sans-serif;
+    margin: 0;
+    margin-left: 5px;
+    color: #3C91E6;
+}
+
+.text--logo p {
+    font-size: 23px;
+}
+
+
+.registration--authorizations {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+.registration--authorizations p {
+    font-family: 'HelveticaNeueCyr-Medium', sans-serif;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.registration {
+    color: #342e37c1;
+}
+
+.sleah {
+    color: #342e37c1;
+}
+
+.authorizations {
+    color: #342e37c1;
+}
+
+.registration:hover, .sleah:hover, .authorizations:hover {
+    color: #3C91E6;
+    font-family: 'HelveticaNeueCyr-Medium', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.square {
+    position: relative;
+    width: 65vh; 
+    height: 50vh;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-top: -5%;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+.square.active {
+    background-color: #ffffff;
+  }
+  .square::before {
+    content: "";
+    position: absolute;
+    width: 795px;
+    height: 758px;
+    background-image: conic-gradient(transparent, transparent, transparent, #3C91E6);
+    top: -29%;
+    left: -22%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .square.active:before {
+    animation: rotate 15s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .container .overlay {
+    position: absolute;
+    width: 98%; 
+    height: 98%; 
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #ffffff;
+  }
+  
+.square p {
+    font-size: 30px;
+    color: #342E37;
+    font-family: 'HelveticaNeueCyr-Medium', sans-serif;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.registration-form {
+    display: flex;
+  }
+
+form {
+    margin: 25px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+}
+
+label {
+    font-family: 'e-Ukraine-Light', sans-serif;
+    font-size: 14px;
+    color: #342E37;
+    margin-top: 25px;
+    margin-bottom: 3px;
+    margin-left: 6px;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+input {
+    width: 98%;
+    height: 35px;
+    border-radius: 9px;
+    border: 1.8px solid rgba(60, 145, 230, 0.5); 
+
+}
+
+#email, #password, #confirm-password {
+    font-family: 'e-Ukraine-UltraLight', sans-serif;
+    color: #342E37;
+    font-size: 15px;
+    padding: 2px;
+    padding-left: 8px;
+}
+
+#email::placeholder, #password::placeholder, #confirm-password::placeholder  {
+    font-family: 'e-Ukraine-UltraLight', sans-serif;
+    color: #342e375e;
+}
+
+
+#email:focus, #password:focus, #confirm-password:focus {
+    outline: none; 
+    border: 2px solid #3C91E6;
+}
+
+#email:hover, #password:hover, #confirm-password:hover {
+
+    border: 2px solid #3C91E6; 
+
+}
+.button--r {
+    width: 75%;
+    height: 45px;
+    border-radius: 10px;
+    border: 0;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    color: #459DF5;
+    font-size: 14px;
+    margin: 0 auto;
+    margin-top: 35px;
+    border: 2px solid #55a5f5;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+  
+.button--r:hover {
+    background: linear-gradient(45deg, #459DF5, #55a5f5);
+    box-shadow: 0px 0px 10px 0px #459DF5;
+    color: white;
+    background-size: 300% 200%;
+    animation: gradientAnimation1 6s linear infinite;
+}
+
+
+.centered-text {
+    text-align: center;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    color: red;
+    font-family: 'e-Ukraine-Regular', sans-serif;
+    font-size: 15px;
+}
+
+@keyframes gradientAnimation1 {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .centered-text {
+    margin: 0;
+}
